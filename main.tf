@@ -52,7 +52,7 @@ resource "aws_cloudfront_origin_access_control" "movies_oac" {
 # --- 4. CLOUDFRONT DISTRIBUTION (THE GATEWAY) ---
 locals {
   s3_origin_id = "S3-MediaStorage"
-  project_root = "/Users/alvaroolazabalalvarez/Desktop/Cloud Projects/S3+OAC+CloudFront"
+  project_root = path.module 
 }
 
 resource "aws_cloudfront_distribution" "media_distribution" {
